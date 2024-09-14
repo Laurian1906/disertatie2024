@@ -1,0 +1,16 @@
+<div *ngIf="multiplayer">
+  <div
+    *ngIf="!isConnected"
+    class="wrapper container-fluid d-flex align-items-center justify-content-center"
+  >
+    <div>
+      <input type="text" placeholder="Introdu un nume/porecla" [(ngModel)]="playerName"/>
+      <button (click)="sendClientData()">Incepe jocul!</button>
+    </div>
+  </div>
+
+  <div *ngIf="isConnected">
+    <p class="position-absolute">{{ playerName }}</p>
+    <app-card [multiplayer]="true"></app-card>
+  </div>
+</div>

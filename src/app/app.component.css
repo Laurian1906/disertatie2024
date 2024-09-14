@@ -1,0 +1,18 @@
+header {
+    height:700px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:-20px;
+}
+
+.display-3{
+    font-weight: 600;
+    color: #3a3a3a;
+    margin-bottom:0;
+}
+.display-6{
+    margin-top:0px;
+    font-size:30px;
+}

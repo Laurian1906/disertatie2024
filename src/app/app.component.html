@@ -1,0 +1,26 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs navbar navbar-expand-lg">
+  <li ngbNavItem>
+    <button ngbNavLink>Acasă</button>
+    <ng-template ngbNavContent class="h-100 d-flex align-items-center justify-content-center">
+        <header class="container-fluid text-center">
+          <p class="display-3">Memorează</p>
+          <p class="display-6">Un joc creat în Angular. :)</p>
+          <p class="display-6 outline">Joacă acum!</p>
+        </header>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <button ngbNavLink>Instrucțiuni</button>
+    <ng-template ngbNavContent>
+      
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <button ngbNavLink>Joacă!</button>
+    <ng-template ngbNavContent>
+      
+    </ng-template>
+  </li>
+
+</ul>
+<div [ngbNavOutlet]="nav"></div>

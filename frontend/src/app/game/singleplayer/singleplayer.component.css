@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    font-family: "Arimo", sans-serif;
+}
+
+a {
+    font-size: 20px;
+    text-align: center;
+    border: 0.5px solid gray;
+    margin: 2px;
+    padding:10px;
+    border-radius: 15px;
+}
+
+a:hover{
+    background-color: gray;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.wrapper{
+    width:100%;
+    height:100vh;
+}
+
+.custom-back-button {
+    background-color: #4CAF50; /* Schimbă această culoare cu cea dorită */
+    color: white; /* Schimbă culoarea textului dacă este necesar */
+    border: none; /* Elimină bordura */
+    padding: 10px 20px; /* Adaugă padding pentru un aspect mai bun */
+    text-align: center; /* Aliniază textul la centru */
+    text-decoration: none; /* Elimină sublinierea linkului */
+    display: inline-block; /* Schimbă la display inline-block */
+    font-size: 16px; /* Schimbă dimensiunea textului */
+    margin: 4px 2px; /* Adaugă margini */
+    cursor: pointer; /* Schimbă cursorul la pointer */
+    border-radius: 4px; /* Adaugă colțuri rotunjite */
+}
+
+.custom-back-button:hover {
+    background-color: #45a049; /* Culoarea la hover */
+}

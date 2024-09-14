@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    font-family: "Arimo", sans-serif;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Adaugă o tranziție a opacității și a transformării */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.no-gutters .col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.cards-wrapper{
+  width:700px;
+  height:300px;
+}
+
+body{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+  width:120px;
+  height:120px;
+  border-radius:20px;
+}
+
+.block_container{
+  width:100%;
+  height:100vh;
+  perspective: 1500px;
+  border-radius:20px;
+}
+
+.block_inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  text-align:center;
+  transform-style: preserve-3d;
+  transition: .6s;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius:20px;
+  transform: scale(1);
+}
+
+
+.block{
+  width: 120px;
+  height: 120px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius:10px;
+  transition: .3s;
+  border-radius:20px;
+}
+
+.block:hover{
+  transform: scale(1.12);
+}
+
+.block_front,
+.block_back{
+  position:absolute;
+  width:100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:20px;
+}
+
+.block_front {
+  background: url("../../assets/backOfCardsPattern.jpeg") 100% 100%;
+  color: white; /* Schimbăm culoarea textului pentru a se potrivi cu fundalul */
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.block_back{
+  background-color:#2980b9;
+  color:white;
+  transform: rotateY(180deg);
+  border-radius:20px;
+}
+
+.rotated {
+  transform: rotateY(180deg);
+}
+
+.rotateBack{
+  transform:rotateY(0deg);
+}
+
+.completed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height:100vh;
+  background-color:#e04b5aef;
+
+  position:absolute;
+  z-index: 2;
+}
+
+.completedText{
+  color: white;
+  font-weight: bold;
+  font-size:50px;
+}
+
+.display-nothing,
+.no-timer,
+.no-level{
+  display:none;
+}
+
+.container-fluid{
+  position:relative;
+}
+
+.bg-custom-orange{
+  background-color: #e04b5a;
+}
+
+.cardHidden {
+  transform: scale(0.00001);
+  transition: transform .4s;
+}
+
+.score-container {
+  margin: 10px;
+  width:100%;
+}
+
+.score-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.no-pointer-events{
+  pointer-events: none;
+}
+

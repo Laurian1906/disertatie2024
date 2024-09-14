@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+header{
+    font-family: "Arimo", sans-serif;
+    width:100%;
+    height:100vh;
+}
+
+.display-3 {
+    font-weight: 600;
+    color: #3a3a3a;
+    font-size: calc(2.5rem + 2vw); /* Responsive font size */
+}
+
+.display-6 {
+    margin-top: 0;
+    font-size: calc(1.25rem + 0.5vw); /* Responsive font size */
+}
+
+button{
+    border-radius:20px;
+    background-color:#e04b5a;
+    color: white;
+}
+
+.image3d-container{
+    perspective: 1500px;
+    width:60%;
+}
+
+.image3d-container img {
+    transform: rotateX(20deg) rotateY(10deg) rotateZ(2deg);
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius:10px;
+    transition: .3s;
+    margin: 20px;
+    padding: 6px;
+    width:120px;
+    height:120px;
+}
+
+.image3d-container img:hover{
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+
+@media (min-width: 768px) {
+    .display-3 {
+        font-size: 120px; /* Fixed size for larger screens */
+    }
+
+    .display-6 {
+        font-size: 40px; /* Fixed size for larger screens */
+    }
+}

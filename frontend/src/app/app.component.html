@@ -1,0 +1,28 @@
+<div>
+  <ul ngbNav #nav="ngbNav" class="navbar bg-navbar p-2">
+    <li ngbNavItem  [routerLinkActive]="['nav-pills']">
+      <a routerLink="/home" ngbNavLink>Acasă</a>
+      <ng-template ngbNavContent>
+        <!-- Content for Acasă -->
+      </ng-template>
+    </li>
+    <li ngbNavItem [routerLinkActive]="['nav-pills']">
+      <a routerLink="/game-rules" ngbNavLink>Instrucțiuni</a>
+      <ng-template ngbNavContent>
+        <!-- Content for Instrucțiuni -->
+      </ng-template>
+    </li>
+    <li ngbNavItem [routerLinkActive]="['nav-pills']">
+      <a routerLink="/menu" ngbNavLink>Joacă!</a>
+      <ng-template ngbNavContent>
+        <!-- Content for Joacă -->
+        <!-- <app-card ></app-card> -->
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+</div>
+
+<router-outlet></router-outlet>
+
+

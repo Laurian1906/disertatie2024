@@ -1,0 +1,63 @@
+<div [ngClass]="{ completed: timerCompleted }">
+  <p [ngClass]="{ completedText: timerCompleted, 'display-nothing': !timerCompleted }">
+    Game Over!
+  </p>
+  <button class="btn btn-secondary p-2" (click)="refreshLevelModePage()" [ngClass]="{ 'display-nothing': !timerCompleted }">
+    Play again!
+  </button>
+</div>
+
+<div [ngClass]="{ completed: gameOver }">
+  <p [ngClass]="{ completedText: gameOver, 'display-nothing': !gameOver }">
+    Game Over!
+  </p>
+  <button class="btn btn-secondary p-2" (click)="generateClassicShiftMode()" [ngClass]="{ 'display-nothing': !gameOver }">
+    Play again!
+  </button>
+</div>
+
+<div
+  class="wrapper d-flex justify-content-center align-items-center flex-column"
+>
+<div class="container-fluid d-flex align-items-center bg-custom-orange text-light mx-auto">
+  <p *ngIf="multiplayer" class="score-container text-center w-100 bold fs-5 ">Nume: {{ playerNameUpdate }}</p>
+  <p class="score-container text-center w-100 bold fs-5 ">Scor: {{ multiplayer ? multiplayerScore : score }}</p>
+  <p class="score-container text-center w-100 bold fs-5 " [ngClass]="{'no-level': !levelMode}">Nivel: {{ level }}</p>
+  <p class="score-container text-center w-100 bold fs-5 ">Erori: {{ multiplayer ? errorsMultiplayer : errors }}</p>
+  <p class="score-container text-center w-100 bold fs-5 " *ngIf="levelMode">
+    Timp:
+    <cd-timer
+      #basicTimer
+      [startTime]="timerValue" 
+      [countdown]="true"
+      format="ms"
+      (onComplete)="handleTimerFinish()"
+    ></cd-timer>
+  </p>  
+</div>
+
+  <div class="row no-gutters text-center gx-0 gy-0 cards-wrapper">
+    <div
+      class="col d-flex justify-content-center align-items-center"
+      *ngFor="let card of cards"
+    >
+      <div class="block" id="block">
+        <div
+          class="block_inner"
+          (click)="rotateBlock(card)"
+          (click)="refreshClassicShiftMode()"
+          [ngClass]="{
+            rotated: card.rotated,
+            rotateBack: !card.rotated,
+            cardHidden: card.hide
+          }"
+        >
+          <div class="block_front no-pointer-events"></div>
+          <div class="block_back">
+            <img [id]="card.id" [src]="card.imgPath" class="card-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
